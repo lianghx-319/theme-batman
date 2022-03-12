@@ -22,22 +22,5 @@ function fish_right_prompt
      printf (__batman_color_trd)":"(__batman_color_dim)"$HOSTNAME "(__batman_color_off)
    end
 
-  if git rev-parse 2> /dev/null
-    git::is_stashed; and echo (__batman_color_trd)"^"(__batman_color_off)
-    printf (__batman_color_snd)"("(begin
-      if git::is_touched
-        echo (__batman_color_trd)"*"(__batman_color_off)
-      else
-        echo ""
-      end
-    end)(__batman_color_fst)(git::branch_name)(__batman_color_snd)(begin
-      set -l count (git::get_ahead_count)
-        if test $count -eq 0
-          echo ""
-        else
-          echo (__batman_color_trd)"+"(__batman_color_fst)$count
-        end
-    end)(__batman_color_snd)") "(__batman_color_off)
-  end
-  printf $_batman_cmd_duration
+  printf (__batman_color_fst)(fish_git_prompt)" "(__batman_color_off)$_batman_cmd_duration
 end
