@@ -1,5 +1,14 @@
 status is-interactive || exit
 
+set __fish_git_prompt_show_informative_status
+set __fish_git_prompt_showcolorhints
+set __fish_git_prompt_showupstream "informative"
+
+set __fish_git_prompt_char_upstream_ahead ">"
+set __fish_git_prompt_char_upstream_behind "<"
+set __fish_git_prompt_char_upstream_diverged "<>"
+set __fish_git_prompt_char_upstream_equal "="
+
 function __batman_color_dim; set_color 666; end
 function __batman_color_fst; set_color -o fa0; end
 function __batman_color_snd; set_color -o 36f; end
