@@ -6,20 +6,40 @@ function __batman_color_snd; set_color -o 36f; end
 function __batman_color_trd; set_color -o f06; end
 function __batman_color_off; set_color normal; end
 
+# Options
 set __fish_git_prompt_show_informative_status
 set __fish_git_prompt_showcolorhints
 set __fish_git_prompt_showupstream "informative"
-set __fish_git_prompt_showstashstate
 
-set __fish_git_prompt_char_stateseparator ' '
-set __fish_git_prompt_color_prefix (__batman_color_dim)
-set __fish_git_prompt_color_suffix (__batman_color_dim)
-set __fish_git_prompt_color_bare (__batman_color_fst)
-set __fish_git_prompt_color_merging (__batman_color_snd)
-set __fish_git_prompt_char_upstream_ahead '>'
-set __fish_git_prompt_char_upstream_behind '<'
-set __fish_git_prompt_char_upstream_diverged '<>'
-set __fish_git_prompt_char_upstream_equal '='
+# Colors
+set green (set_color green)
+set magenta (set_color magenta)
+set normal (set_color normal)
+set red (set_color red)
+set yellow (set_color yellow)
+
+set __fish_git_prompt_color_branch magenta --bold
+set __fish_git_prompt_color_dirtystate white
+set __fish_git_prompt_color_invalidstate red
+set __fish_git_prompt_color_merging yellow
+set __fish_git_prompt_color_stagedstate yellow
+set __fish_git_prompt_color_upstream_ahead green
+set __fish_git_prompt_color_upstream_behind red
+
+
+# Icons
+set __fish_git_prompt_char_cleanstate ' 👍  '
+set __fish_git_prompt_char_conflictedstate ' ⚠️  '
+set __fish_git_prompt_char_dirtystate ' 💩  '
+set __fish_git_prompt_char_invalidstate ' 🤮  '
+set __fish_git_prompt_char_stagedstate ' 🚥  '
+set __fish_git_prompt_char_stashstate ' 📦  '
+set __fish_git_prompt_char_stateseparator ' | '
+set __fish_git_prompt_char_untrackedfiles ' 🔍  '
+set __fish_git_prompt_char_upstream_ahead ' ☝️  '
+set __fish_git_prompt_char_upstream_behind ' 👇  '
+set __fish_git_prompt_char_upstream_diverged ' 🚧  '
+set __fish_git_prompt_char_upstream_equal ' 💯 ' 
 
 function _batman_postexec --on-event fish_postexec
     test "$CMD_DURATION" -lt 1000 && set _batman_cmd_duration && return
