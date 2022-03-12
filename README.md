@@ -23,6 +23,7 @@ _From left to right:_
 + Display number of commits in relation to the current branch.
 + Display current time.
 + _Batman_ inspired colors.
++ Cmd Duration
 
 ## Screenshot
 
