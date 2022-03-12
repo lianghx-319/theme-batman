@@ -39,5 +39,5 @@ function fish_right_prompt
         end
     end)(__batman_color_snd)") "(__batman_color_off)
   end
-  printf (__batman_color_dim)(date +%H(__batman_color_fst):(__batman_color_dim)%M(__batman_color_fst):(__batman_color_dim)%S)(__batman_color_off)" "
+  printf _batman_cmd_duration
 end
