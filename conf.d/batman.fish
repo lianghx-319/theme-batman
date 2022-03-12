@@ -1,9 +1,14 @@
 status is-interactive || exit
 
-function __batman_color_dim; set_color 666; end
-function __batman_color_fst; set_color -o fa0; end
-function __batman_color_snd; set_color -o 36f; end
-function __batman_color_trd; set_color -o f06; end
+set -g _batman_color_gray 666
+set -g _batman_color_yellow fa0
+set -g _batman_color_blue 36f
+set -g _batman_color_red f06
+
+function __batman_color_dim; set_color $_batman_color_gray; end
+function __batman_color_fst; set_color -o $_batman_color_yellow; end
+function __batman_color_snd; set_color -o $_batman_color_blue; end
+function __batman_color_trd; set_color -o $_batman_color_red; end
 function __batman_color_off; set_color normal; end
 
 function _batman_postexec --on-event fish_postexec
