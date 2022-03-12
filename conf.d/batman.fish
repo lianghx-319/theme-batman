@@ -1,19 +1,25 @@
 status is-interactive || exit
 
-set __fish_git_prompt_show_informative_status
-set __fish_git_prompt_showcolorhints
-set __fish_git_prompt_showupstream "informative"
-
-set __fish_git_prompt_char_upstream_ahead ">"
-set __fish_git_prompt_char_upstream_behind "<"
-set __fish_git_prompt_char_upstream_diverged "<>"
-set __fish_git_prompt_char_upstream_equal "="
-
 function __batman_color_dim; set_color 666; end
 function __batman_color_fst; set_color -o fa0; end
 function __batman_color_snd; set_color -o 36f; end
 function __batman_color_trd; set_color -o f06; end
 function __batman_color_off; set_color normal; end
+
+set __fish_git_prompt_show_informative_status
+set __fish_git_prompt_showcolorhints
+set __fish_git_prompt_showupstream "informative"
+set __fish_git_prompt_showstashstate
+
+set __fish_git_prompt_char_stateseparator ' '
+set __fish_git_prompt_color_prefix (__batman_color_dim)
+set __fish_git_prompt_color_suffix (__batman_color_dim)
+set __fish_git_prompt_color_bare (__batman_color_fst)
+set __fish_git_prompt_color_merging (__batman_color_snd)
+set __fish_git_prompt_char_upstream_ahead '>'
+set __fish_git_prompt_char_upstream_behind '<'
+set __fish_git_prompt_char_upstream_diverged '<>'
+set __fish_git_prompt_char_upstream_equal '='
 
 function _batman_postexec --on-event fish_postexec
     test "$CMD_DURATION" -lt 1000 && set _batman_cmd_duration && return

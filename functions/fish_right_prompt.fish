@@ -22,5 +22,5 @@ function fish_right_prompt
      printf (__batman_color_trd)":"(__batman_color_dim)"$HOSTNAME "(__batman_color_off)
    end
 
-  printf (__batman_color_fst)(fish_git_prompt)" "(__batman_color_off)$_batman_cmd_duration
+  printf (fish_git_prompt)" "$_batman_cmd_duration
 end
