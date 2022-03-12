@@ -12,7 +12,7 @@ set __fish_git_prompt_showcolorhints
 set __fish_git_prompt_showupstream "verbose"
 
 # Colors
-set green (set_color green)
+# set green (set_color green)
 set magenta (set_color magenta)
 set normal (set_color normal)
 set red (set_color red)
