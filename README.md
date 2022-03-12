@@ -1,4 +1,4 @@
-<img src="https://dl.dropboxusercontent.com/u/56336/omf/omf-logo-optimised.svg" align="left" width="144px" height="144px"/>
+<img src="https://cloud.githubusercontent.com/assets/8317250/7785620/0059f784-01d3-11e5-8a01-8edf6c4e2af7.png" align="left" width="144px" height="144px"/>
 
 #### Batman
 > A [Oh My Fish][omf-link] theme inspired by Batman.
