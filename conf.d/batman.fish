@@ -9,7 +9,7 @@ function __batman_color_off; set_color normal; end
 # Options
 set __fish_git_prompt_show_informative_status
 set __fish_git_prompt_showcolorhints
-set __fish_git_prompt_showupstream "informative"
+set __fish_git_prompt_showupstream "verbose"
 
 # Colors
 set green (set_color green)
