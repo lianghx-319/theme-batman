@@ -1,18 +1,37 @@
-function git::is_stashed
-  command git rev-parse --verify --quiet refs/stash >/dev/null
-end
+# Options
+set __fish_git_prompt_show_informative_status
+set __fish_git_prompt_showcolorhints
+set __fish_git_prompt_showupstream "informative"
 
-function git::get_ahead_count
-  echo (command git log 2> /dev/null | grep '^commit' | wc -l | tr -d " ")
-end
+# Colors
+# set green (set_color green)
+set magenta (set_color magenta)
+set normal (set_color normal)
+set red (set_color red)
+set yellow (set_color yellow)
 
-function git::branch_name
-  command git symbolic-ref --short HEAD
-end
+set __fish_git_prompt_color_branch magenta --bold
+set __fish_git_prompt_color_dirtystate white
+set __fish_git_prompt_color_invalidstate red
+set __fish_git_prompt_color_merging yellow
+set __fish_git_prompt_color_stagedstate yellow
+set __fish_git_prompt_color_upstream_ahead green
+set __fish_git_prompt_color_upstream_behind red
 
-function git::is_touched
-  test -n (echo (command git status --porcelain))
-end
+
+# Icons
+set __fish_git_prompt_char_cleanstate ' 👍  '
+set __fish_git_prompt_char_conflictedstate ' ⚠️  '
+set __fish_git_prompt_char_dirtystate ' 💩  '
+set __fish_git_prompt_char_invalidstate ' 🤮  '
+set __fish_git_prompt_char_stagedstate ' 🚥  '
+set __fish_git_prompt_char_stashstate ' 📦  '
+set __fish_git_prompt_char_stateseparator ' | '
+set __fish_git_prompt_char_untrackedfiles ' 🔍  '
+set __fish_git_prompt_char_upstream_ahead ' ☝️  '
+set __fish_git_prompt_char_upstream_behind ' 👇  '
+set __fish_git_prompt_char_upstream_diverged ' 🚧  '
+set __fish_git_prompt_char_upstream_equal ' 💯 ' 
 
 function fish_right_prompt
   set -l code $status
