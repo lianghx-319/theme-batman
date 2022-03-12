@@ -39,5 +39,5 @@ function fish_right_prompt
         end
     end)(__batman_color_snd)") "(__batman_color_off)
   end
-  printf _batman_cmd_duration
+  printf $_batman_cmd_duration
 end
