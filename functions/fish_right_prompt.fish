@@ -11,9 +11,14 @@ set -g __fish_git_prompt_color_branch $_batman_color_yellow --bold
 set -g __fish_git_prompt_color_dirtystate $_batman_color_red
 set -g __fish_git_prompt_color_invalidstate $_batman_color_red
 set -g __fish_git_prompt_color_merging $_batman_color_red
-set -g __fish_git_prompt_color_stagedstate $_batman_color_yellow
-set -g __fish_git_prompt_color_upstream_ahead $_batman_color_yellow
-# set -g __fish_git_prompt_color_upstream_behind $_batman_color_yellow
+set -g __fish_git_prompt_color_stagedstate $_batman_color_blue
+set -g __fish_git_prompt_color_upstream_ahead $_batman_color_blue
+set -g __fish_git_prompt_color_upstream_behind $_batman_color_blue
+set -g __fish_git_prompt_color_cleanstate $_batman_color_yellow
+set -g __fish_git_prompt_color_untrackedfiles $_batman_color_yellow
+set -g __fish_git_prompt_color_upstream $_batman_color_yellow
+set -g __fish_git_prompt_color_flags $_batman_color_yellow
+set -g __fish_git_prompt_color_branch_detached $_batman_color_red
 
 
 # Icons
