@@ -13,7 +13,7 @@ set -g __fish_git_prompt_color_invalidstate $_batman_color_red
 set -g __fish_git_prompt_color_merging $_batman_color_red
 set -g __fish_git_prompt_color_stagedstate $_batman_color_yellow
 set -g __fish_git_prompt_color_upstream_ahead $_batman_color_yellow
-set -g __fish_git_prompt_color_upstream_behind $_batman_color_yellow
+# set -g __fish_git_prompt_color_upstream_behind $_batman_color_yellow
 
 
 # Icons
@@ -37,5 +37,6 @@ function fish_right_prompt
      printf (__batman_color_trd)":"(__batman_color_dim)"$HOSTNAME "(__batman_color_off)
    end
 
-  printf (__fish_git_prompt)" "$_batman_cmd_duration
+  printf '%s ' (__fish_git_prompt | string trim)
+  printf $_batman_cmd_duration
 end
