@@ -62,3 +62,16 @@ set --query __fish_git_prompt_char_upstream_ahead || set -g __fish_git_prompt_ch
 set --query __fish_git_prompt_char_upstream_behind || set -g __fish_git_prompt_char_upstream_behind '<'
 set --query __fish_git_prompt_char_upstream_diverged || set -g __fish_git_prompt_char_upstream_diverged '<>'
 set --query __fish_git_prompt_char_upstream_equal || set -g __fish_git_prompt_char_upstream_equal '=' 
+
+# fish syntax highlight override
+set -g fish_color_command $batman_color_blue
+set -g fish_color_keyword $batman_color_yellow
+set -g fish_color_quote $batman_color_green
+set -g fish_color_end $batman_color_red
+set -g fish_color_error $batman_color_red
+set -g fish_color_param $batman_color_yellow --bold
+set -g fish_color_option $batman_color_blue
+set -g fish_color_comment $batman_color_gray
+set -g fish_color_operator $batman_color_green
+set -g fish_color_redirection $batman_color_blue
+set -g fish_color_search_match --background $batman_color_green
