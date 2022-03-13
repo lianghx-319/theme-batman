@@ -28,3 +28,37 @@ function _batman_postexec --on-event fish_postexec
     set --global _batman_cmd_duration "$out"(__batman_color_off)" "
 end
 
+# fish git prompt options
+set --query __fish_git_prompt_show_informative_status || set -g __fish_git_prompt_show_informative_status
+set --query __fish_git_prompt_showcolorhints || set -g __fish_git_prompt_showcolorhints
+set --query __fish_git_prompt_showdirtystate || set -g __fish_git_prompt_showdirtystate
+set --query __fish_git_prompt_showuntrackedfiles || set -g __fish_git_prompt_showuntrackedfiles
+set --query __fish_git_prompt_showstashstate || set -g __fish_git_prompt_showstashstate
+set --query __fish_git_prompt_showupstream || set -g __fish_git_prompt_showupstream "informative"
+
+# fish git prompt colors
+set --query __fish_git_prompt_color_branch || set -g __fish_git_prompt_color_branch $batman_color_yellow --bold
+set --query __fish_git_prompt_color_dirtystate || set -g __fish_git_prompt_color_dirtystate $batman_color_red
+set --query __fish_git_prompt_color_invalidstate || set -g __fish_git_prompt_color_invalidstate $batman_color_red
+set --query __fish_git_prompt_color_merging || set -g __fish_git_prompt_color_merging $batman_color_blue
+set --query __fish_git_prompt_color_stagedstate || set -g __fish_git_prompt_color_stagedstate $batman_color_green
+set --query __fish_git_prompt_color_upstream_ahead || set -g __fish_git_prompt_color_upstream_ahead $batman_color_blue
+set --query __fish_git_prompt_color_upstream_behind || set -g __fish_git_prompt_color_upstream_behind $batman_color_blue
+set --query __fish_git_prompt_color_cleanstate || set -g __fish_git_prompt_color_cleanstate $batman_color_green
+set --query __fish_git_prompt_color_untrackedfiles || set -g __fish_git_prompt_color_untrackedfiles $batman_color_red
+set --query __fish_git_prompt_color_upstream || set -g __fish_git_prompt_color_upstream $batman_color_yellow
+set --query __fish_git_prompt_color_flags || set -g __fish_git_prompt_color_flags $batman_color_yellow
+set --query __fish_git_prompt_color_branch_detached || set -g __fish_git_prompt_color_branch_detached $batman_color_red
+
+# fish prompt symble
+set --query __fish_git_prompt_char_cleanstate || set -g __fish_git_prompt_char_cleanstate '✔'
+set --query __fish_git_prompt_char_dirtystate || set -g __fish_git_prompt_char_dirtystate '*'
+set --query __fish_git_prompt_char_invalidstate || set -g __fish_git_prompt_char_invalidstate '#'
+set --query __fish_git_prompt_char_stagedstate || set -g __fish_git_prompt_char_stagedstate '+'
+set --query __fish_git_prompt_char_stashstate || set -g __fish_git_prompt_char_stashstate '$'
+set --query __fish_git_prompt_char_stateseparator || set -g __fish_git_prompt_char_stateseparator ' '
+set --query __fish_git_prompt_char_untrackedfiles || set -g __fish_git_prompt_char_untrackedfiles '%'
+set --query __fish_git_prompt_char_upstream_ahead || set -g __fish_git_prompt_char_upstream_ahead '>'
+set --query __fish_git_prompt_char_upstream_behind || set -g __fish_git_prompt_char_upstream_behind '<'
+set --query __fish_git_prompt_char_upstream_diverged || set -g __fish_git_prompt_char_upstream_diverged '<>'
+set --query __fish_git_prompt_char_upstream_equal || set -g __fish_git_prompt_char_upstream_equal '=' 
