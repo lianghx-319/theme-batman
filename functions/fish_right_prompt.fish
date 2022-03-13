@@ -36,10 +36,10 @@ set -g __fish_git_prompt_char_upstream_equal '='
 
 function fish_right_prompt
   set -l code $status
-  test $code -ne 0; and echo (__batman_color_dim)"("(__batman_color_trd)"$code"(__batman_color_dim)") "(__batman_color_off)
+  test $code -ne 0; and echo (__batman_color_gray)"("(__batman_color_red)"$code"(__batman_color_gray)") "(__batman_color_off)
 
   if test -n "$SSH_CONNECTION"
-     printf (__batman_color_trd)":"(__batman_color_dim)"$HOSTNAME "(__batman_color_off)
+     printf (__batman_color_red)":"(__batman_color_gray)"$HOSTNAME "(__batman_color_off)
    end
 
   printf '%s ' (__fish_git_prompt | string trim)
